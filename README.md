@@ -1,6 +1,6 @@
 # IVON Technologies
 ### The perfect giveaway bot to host giveaways easily on your server build with discord.js
-<a href="https://imgur.com/1TLIl08"><img src="https://i.imgur.com/1TLIl08.png" title="source: imgur.com" /></a>
+ 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) <br>
 ## Invite our [Giveaway bot IVON](https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands) and help us out!
 <a href="https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands" target="_blank"><img src="https://i.imgur.com/w0tYT5y.png" title="source: imgur.com" /></a>
