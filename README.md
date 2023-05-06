@@ -1,55 +1,13 @@
-# IVON Technologies
-### The perfect giveaway bot to host giveaways easily on your server build with discord.js
- 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) <br>
-## Invite our [Giveaway bot IVON](https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands) and help us out!
-<a href="https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands" target="_blank"><img src="https://i.imgur.com/w0tYT5y.png" title="source: imgur.com" /></a>
-## 2022 Recap
-<a href="https://imgur.com/QQTf6bK"><img src="https://i.imgur.com/QQTf6bK.png" title="source: imgur.com" /></a>
-## Developers
-<p align="center">
-  <img src="https://discord.c99.nl/widget/theme-2/846193169758814228.png" align="center"> <br><br>
-  <img src="https://discord.c99.nl/widget/theme-2/768741356297912331.png" align="center"> <br><br>
-  <img src="https://discord.c99.nl/widget/theme-2/719229142536683550.png" align="center">
-</p>
+# Shift Swap
+### Our Discord bot to allow mentors to fairly swap shifts. Built with discord.js.
 
-## Links
-- <a href="https://top.gg/bot/973436715819745290">
-  <img src="https://top.gg/api/widget/owner/973436715819745290.svg"></a>
-- <a href='https://ivon.netlify.app' target="_blank"><img alt='netlify' src='https://img.shields.io/badge/Website-100000?style=for-the-badge&logo=netlify&logoColor=white&labelColor=04AD7D&color=90FFA7'/></a>
-- <a href='https://www.patreon.com/projectrazer' target="_blank"><img alt='Patreon' src='https://img.shields.io/badge/Patreon-100000?style=for-the-badge&logo=Patreon&logoColor=white&labelColor=FF7726&color=FED89F'/></a>
-- Inspired by: [ZeroDiscord](https://github.com/ZeroDiscord)
-
-
-## Support Server
-<a href="https://discord.gg/cqSEc9FNrE"><img src="https://discord.com/api/guilds/886462690153857054/widget.png?style=banner2"></a>
-
-## Licensed Under
-### Creative Commons CC0 v1.0 Universal
-[View the license here](https://github.com/sandarutharuneth/ivongiveaways/blob/master/LICENSE)
-#### Copyright 2022 © All Rights are Reserved
-
-# Give us a Star
-<p align="center">
-  <a href="https://github.com/sandarutharuneth/ivongiveaways/" target="_blank"> 
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=sandarutharuneth&repo=ivongiveaways&theme=react" alt="Readme-Card.png">
-  </a>
-</p>
-
-# Code of Conduct
-
-Please read [code of conduct](https://github.com/sandarutharuneth/ivongiveaways/blob/master/CODE_OF_CONDUCT.md) for details on our code of conduct.
-
-# You can run the bot in just a few steps! Let me show you how:
+# How to run:
 ## Hosting 
-> ⚠  This bot needs a [Node.js v16+](https://nodejs.org/en/blog/release/v16.0.0/)  runtime to function since discord.js version 13 requires node version to function.
-
-[![Run on Repl.it](https://repl.it/badge/github/sandarutharuneth/ivongiveaways)](https://repl.it/github/sandarutharuneth/ivongiveaways)
-[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/sandarutharuneth/ivongiveaways)
+> ⚠  This bot needs a [Node.js v16+](https://nodejs.org/en/blog/release/v16.0.0/)  runtime to function since discord.js version 13 requires node version 16 to function. I've been using Node.js v18+.
 
 ### Step 1: Install the Dependencies:
 Linux 
-```js
+```sh
 apt install nodejs npm -y
 curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
 chmod 777 nodesource_setup.sh
@@ -63,75 +21,47 @@ Windows
 npm install 
 ```
 
-### Step 2: Obtain a Bot Token From [Here](https://discord.com/developers) <br> <br>
-➖
+### Step 2: You may need to add the bot to your hosts file.
+```sh
+Open your hosts file and add:
+172.0.0.1   discord.local
+```
+
+### Step 3: Create a bot [Here](https://discord.com/developers) <br> <br>
+```
+- You'll need to create a new application in the top right.
+- Click on bot and click 'add bot'
+- Copy the token. Once you copy it, it will dissapear, so if you lose it, you'll have to reset the token.
+- In the 0Auth2 tab, you'll need a redirect. add this one to run it locally: http://localhost:8080/oauth/token
+```
 <b>
   
 
-### Step 3 : Replace the Token and other dependencies inside [.env](https://github.com/sandarutharuneth/ivongiveaways/blob/master/.env) <br>
-  ## Follow the [wiki](https://github.com/sandarutharuneth/ivongiveaways/wiki) for additional help
+### Step 4: Replace the Token and other dependencies inside [.env](https://github.com/sandarutharuneth/ivongiveaways/blob/master/.env) <br>
 ```sh
-TOEKN=Your Token goes here
-FOTTERIMG=Your Footer Image Link goes here
-THUMBNAIL=Your Thumbnail image link goes here
-DCBL=https://cdn.discordapp.com/attachments/477946103287906304/482738675776618497/DBL.png
+TOKEN=Your bot token goes here
+FOOTERIMG=This will show up at the footer of each embed when called, it is set to our lighthouse logo.
+THUMBNAIL=This will show up as the thumbnail of each embed when called, it is set to our lighthouse logo.
+DCBL=https://cdn.discordapp.com/attachments/477946103287906304/482738675776618497/DBL.png #This is a default Discord Bot List logo.
+```  
+### Step 5: Invite the bot.
 ```
-### Step 4: Get your japi key
-- Visit [japi](https://key.japi.rest) and get your key
-- Add your key on `slash/userinfo.js`
-```js
-const japiRest = new japiRestPkg('Your API Key');
+- In the Discord developer portal, go to the bot > 0Auth2 > URL generator
+- Add 'identity' and 'bot'.
+- Select the redirect URL added in step 3.
+- For premissions in 'General' add 'Read Messages/View Channels
+- For permissions in 'Test' add 'Send messages', 'Manage Messages', 'Embed Links', 'Attach Files', 'Read Message History', 'Mention everyone', 'Use External Emojis', 'Add Reactions', 'Use Slash Commands'.
+- Copy the URL at the bottom and paste it in a browser.
+- Follow the prompts to invite it to one of our test servers.
 ```
-#### That's all! We Are Done! Now Simply host the Bot!
+### Step 6: Now run the bot.
 
 ### Run with node
-```js
+```sh
 node index.js
 ```
 ### Run with pm2
-```js
+```sh
 npm install -g pm2@latest
-pm2 start --name "ivongiveaways" index.js --watch
+pm2 start --name "discord-shift-swap" index.js --watch
 ```
-
-# Features
-## Featuring | Slash Only Giveaway Commands 
-➖
-<b>
-  
-### Interactive Giveaway Creation 
-➖
-<b>
-
-### Basic Utility Commands
-➖
-<b>
-  
-### Featured Bonus Entries 
-➖
-<b>
-
-  <h3 align="left">Connect with me:</h3>
-<div align="center">
-<a href="https://github.com/sandarutharuneth" target="_blank">
-<img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
-</a>
-<a href="https://twitter.com/sandarudev" target="_blank">
-<img src=https://img.shields.io/badge/twitter-%2300acee.svg?&style=for-the-badge&logo=twitter&logoColor=white alt=twitter style="margin-bottom: 5px;" />
-</a>
-<a href="https://dev.to/sandarudev" target="_blank">
-<img src=https://img.shields.io/badge/dev.to-%2308090A.svg?&style=for-the-badge&logo=dev.to&logoColor=white alt=devto style="margin-bottom: 5px;" />
-</a>
-<a href="https://instagram.com/sandarutharuneth" target="_blank">
-<img src=https://img.shields.io/badge/instagram-%23000000.svg?&style=for-the-badge&logo=instagram&logoColor=white alt=instagram style="margin-bottom: 5px;" />
-</a>
-<a href="https://www.youtube.com/user/https://www.youtube.com/channel/UCOGChXvRG1dYCY3X7c3HFXQ" target="_blank">
-<img src=https://img.shields.io/badge/youtube-%23EE4831.svg?&style=for-the-badge&logo=youtube&logoColor=white alt=youtube style="margin-bottom: 5px;" />
-</a>  
-</div> 
-  
-# Contributors
-
-![GitHub Contributors Image](https://contrib.rocks/image?repo=sandarutharuneth/ivongiveaways)
-
-<h6 align="center">©️ Project Razer</h6>
