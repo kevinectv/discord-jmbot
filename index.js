@@ -88,6 +88,23 @@ fs.readdir("./events/giveaways", (_err, files) => {
 
 /* Load all events (mongo based) */
 
+// Let commands be a new collection ( message commands )
+client.commands = new Discord.Collection();
+/* Load all commands */
+ fs.readdir("./commands/", (_err, files) => {
+  files.forEach(file => {
+    if (!file.endsWith(".js")) return;
+    let props = require(`./commands/${file}`);
+    let commandName = file.split(".")[0];
+    client.commands.set(commandName, {
+      name: commandName,
+      ...props
+    });
+    console.log(`[Command] ✅  Loaded: ${commandName}`);
+  });
+});
+
+
 
 
 // let interactions be a new collection ( slash commands  )
