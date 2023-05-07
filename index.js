@@ -11,6 +11,10 @@ const client = new Client({
     Partials.Channel, // for text channel
     Partials.GuildMember, // for guild member
     Partials.Reaction, // for message reaction
+    Partials.ThreadMember,
+    Partials.User,
+    Partials.Message,
+    Partials.GuildScheduledEvent,
   ],
   intents: [
     GatewayIntentBits.Guilds, // for guild related things
